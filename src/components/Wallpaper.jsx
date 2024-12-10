@@ -5,7 +5,6 @@ const WallpaperApp = () => {
     const [wallpapers, setWallpapers] = useState([]);
     const [searchQuery, setSearchQuery] = useState("");
     const [loading, setLoading] = useState(false);
-    const [pageper,setPageper]=useState(10)
     // const UNSPLASH_ACCESS_KEY ='lhUq0Qfw9YbO7omOOdDAQlmbTQVnWhyteqpjDe4ZNIw';
     const UNSPLASH_ACCESS_KEY = import.meta.env.VITE_UNSPLASH_ACCESS_KEY;
     const fetchWallpapers = async (query = "nature") => {
@@ -17,6 +16,7 @@ const WallpaperApp = () => {
                     params: {
                         query,
                         per_page: 30,
+                        
                     },
                     headers: {
                         Authorization: `Client-ID ${UNSPLASH_ACCESS_KEY}`,
@@ -48,7 +48,7 @@ const WallpaperApp = () => {
 
     useEffect(() => {
         fetchWallpapers();
-    }, [pageper]);
+    }, []);
 
     return (
         <div className=" bg-gradient-to-r from-yellow-500 to-orange-200 min-h-screen">
@@ -124,6 +124,7 @@ const WallpaperApp = () => {
                 </div>
             )}
             {/* <button type="button" onClick={()=>setPageper(pageper+10)} >load more</button> */}
+            
         </div>
     );
 };

@@ -111,7 +111,7 @@ const WallpaperApp = () => {
                     <div className="w-4 h-4 rounded-full bg-red-500 animate-bounce [animation-delay:.7s]" />
                 </div>
             ) : (
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-10 py-2">
                     {wallpapers.map((wallpaper) => (
                         <div
                             key={wallpaper.id}

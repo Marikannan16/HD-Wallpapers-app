@@ -16,7 +16,7 @@ const WallpaperApp = () => {
                     params: {
                         query,
                         per_page: 30,
-                        
+
                     },
                     headers: {
                         Authorization: `Client-ID ${UNSPLASH_ACCESS_KEY}`,
@@ -52,8 +52,9 @@ const WallpaperApp = () => {
 
     return (
         <div className=" bg-gradient-to-r from-yellow-500 to-orange-200 min-h-screen">
-            <div className="flex gap-3 bg-white px-5 ">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" className="w-10 h-10 mt-2">
+            <div className="flex gap-3 bg-white justify-between pe-0.5">
+                <div className="flex gap-3 px-5 ">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" className="w-10 h-10 mt-1.5">
 
                     <circle cx="150" cy="150" r="140" fill="none" stroke="#2c3e50" strokeWidth="10" />
 
@@ -66,10 +67,20 @@ const WallpaperApp = () => {
                         HDW
                     </text>
                 </svg>
-                <h1 className="text-3xl font-bold text-center text-gray-800 mb-4 mt-2">
+                <h1 className="text-xl font-bold text-center text-gray-800 mb-4 mt-3">
                     HD Wallpapers
                 </h1>
-            </div> <br/>
+                </div>
+                <a href="https://github.com/Marikannan16" className="me-10 mt-3.5">
+                <button className="">
+                    <svg strokeLinejoin="round" strokeLinecap="round" strokeWidth={2} stroke="currentColor" fill="none" viewBox="0 0 24 24" className="w-6 hover:scale-125 duration-200 hover:stroke-blue-500"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" /></svg>
+                </button>
+                <span className="absolute -top-14 left-[50%] -translate-x-[50%] z-20 origin-left scale-0 px-3 rounded-lg border border-gray-300 bg-white py-2 text-sm font-bold shadow-md transition-all duration-300 ease-in-out group-hover:scale-100">GitHub<span>
+                </span></span>
+                </a>
+
+
+            </div> <br />
 
             <form onSubmit={handleSearch} className="flex justify-center mb-6 ">
                 <div className="relative w-[700px]">
@@ -124,7 +135,7 @@ const WallpaperApp = () => {
                 </div>
             )}
             {/* <button type="button" onClick={()=>setPageper(pageper+10)} >load more</button> */}
-            
+
         </div>
     );
 };

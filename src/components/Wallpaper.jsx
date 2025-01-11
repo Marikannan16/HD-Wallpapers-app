@@ -5,8 +5,8 @@ const WallpaperApp = () => {
     const [wallpapers, setWallpapers] = useState([]);
     const [searchQuery, setSearchQuery] = useState("");
     const [loading, setLoading] = useState(false);
-    // const UNSPLASH_ACCESS_KEY ='lhUq0Qfw9YbO7omOOdDAQlmbTQVnWhyteqpjDe4ZNIw';
-    const UNSPLASH_ACCESS_KEY = import.meta.env.VITE_UNSPLASH_ACCESS_KEY;
+    const UNSPLASH_ACCESS_KEY ='lhUq0Qfw9YbO7omOOdDAQlmbTQVnWhyteqpjDe4ZNIw';
+    // const UNSPLASH_ACCESS_KEY = import.meta.env.VITE_UNSPLASH_ACCESS_KEY;
     const fetchWallpapers = async (query = "nature") => {
         setLoading(true);
         try {
